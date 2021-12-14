@@ -42,13 +42,17 @@ function submit(arr){
     }
     let p = document.createElement("P")
     let text = document.createTextNode(`You got ${match}/${total} right`)
+    if (document.getElementById("result") != undefined){
+        document.getElementById("result").remove()
+    }
     p.appendChild(text)
+    p.setAttribute("id", "result")
     document.body.appendChild(p)
 }
 
 let questions = [
     new Question("2 + x = 20", "18", 1),
-    new Question("(4x + 4)/2 = 25 - 5", "11", 1)
+    new Question("(4x + 4)/2 = 25 - 5", "9", 2)
 ]
 
 
